@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""This module defines a Square"""
+""" Empty class Square that defines a square
+    Attributes:
+        size type int: size of the square
+    """
 
 
 class Square:
