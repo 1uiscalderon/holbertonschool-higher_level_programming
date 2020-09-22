@@ -13,19 +13,18 @@ class Square:
 
     def area(self):
         """defines area of the Square"""
-        return (self.__size ** 2)
+        return self.__size ** 2
 
+    @property
+    def size(self):
+        """Defines size of Square"""
+        return self.__size
 
-@property
-def size(self):
-    """Defines size of Square"""
-    return self.__size
-
-
-@size.setter
-def size(self, value):
-    """Defines size of Square with a value entered"""
-    if type(value) is not int:
-        raise TypeError("size must be an integer")
-    if value < 0:
-        raise ValueError("size must be >= 0")
+    @size.setter
+    def size(self, value):
+        """Defines size of Square with a value entered"""
+        if type(value) is not int:
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
