@@ -20,6 +20,7 @@ class Square:
         """prints the Square"""
         if self.__size == 0:
             print()
+            return
         for i in range(self.__position[1]):
             print()
         for i in range(self.__size):
