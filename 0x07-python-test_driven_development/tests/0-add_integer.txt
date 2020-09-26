@@ -23,13 +23,13 @@ Add a negative value:
     -2
 
 Infinite int:
-    >>> add_integer(float('inf', 1)
+    >>> add_integer(float('inf'), 1)
     Traceback (most recent call last):
         ...
     OverflowError: cannot convert float infinity to integer
 
 Int with string:
-    >>>add_integer(2, "H")
+    >>> add_integer(2, "H")
     Traceback (most recent call last):
         ...
     TypeError: b must be an integer
@@ -48,13 +48,13 @@ None at arg 1:
 
 
 0 arguments:
-    >>>add_integer()
+    >>> add_integer()
     Traceback (most recent call last):
         ...
     TypeError: add_integer() missing 1 required positional argument: 'a'
 
 1 arguments:
-    >>>add_integer(1)
+    >>> add_integer(1)
     99
 
 more than 2 arguments:
