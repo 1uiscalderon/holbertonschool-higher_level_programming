@@ -1,0 +1,35 @@
+The ``101-matrix_mul`` module
+=============================
+
+Using ``lazy_matrix_mul``
+---------------------
+importing the module
+    >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+Checking normal values:
+    >>> print(matrix_mul([[1, 2], [4, 5]],[[1, 2], [4, 5]]))
+    [[9, 12], [24, 33]]
+
+Checking normal values:
+    >>> print(matrix_mul([[1, 2], [4, 5]],[[5]]))
+    Traceback (most recent call last):
+        ...
+    ValueError: m_a and m_b can't be multiplied
+
+Second matrix not lists:
+    >>> print(matrix_mul([[4, 5]], [4, 5]))
+    Traceback (most recent call last):
+        ...
+    TypeError: m_a must be a list of lists
+
+Checking matrix with empty rows :
+    >>> print(matrix_mul([],[[1, 2], [4, 5]]))
+    Traceback (most recent call last):
+            ...
+    ValueError: m_a can't be empty
+
+Matrix with non-list or non-list of lists:
+    >>> print(matrix_mul("Holberton", [4, 5]))
+    Traceback (most recent call last):
+        ...
+    TypeError: m_a must be a list
