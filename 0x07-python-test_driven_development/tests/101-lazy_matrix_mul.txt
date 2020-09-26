@@ -32,3 +32,15 @@ Matrix with non-list or non-list of lists:
     Traceback (most recent call last):
         ...
     ValueError: Scalar operands are not allowed, use '*' instead
+
+Matrix no argument:
+    >>> print(matrix_mul([4, 5]))
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+Matrix no arguments:
+    >>> print(matrix_mul())
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
