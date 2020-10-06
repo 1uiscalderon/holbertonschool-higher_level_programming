@@ -47,6 +47,9 @@ Checking clear:
 	>>> print(my_list)
 	[]
 
-Checking if my_list is a subclass of list:
-    >>> issubclass(MyList, list)
-    True
+Checking sorted with negative numbers:
+	>>> my_list.append(-1)
+	>>> my_list.append(-2)
+	>>> my_list.append(-3)
+    >>> print(my_list)
+    [-3, -2, -1]
