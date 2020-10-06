@@ -52,4 +52,4 @@ Checking sorted with negative numbers:
 	>>> my_list.append(-2)
 	>>> my_list.append(-3)
     >>> print(my_list)
-    [-3, -2, -1]
+    [-1, -2, -3]
