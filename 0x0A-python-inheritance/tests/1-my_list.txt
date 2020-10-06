@@ -62,3 +62,7 @@ Checking insert:
 	>>> my_list.insert(0, 5)
 	>>> print(my_list)
 	[5, -1, -2, -3]
+
+Checking sorted:
+	>>> my_list.print_sorted()
+	[-3, -2, -1, 5]
