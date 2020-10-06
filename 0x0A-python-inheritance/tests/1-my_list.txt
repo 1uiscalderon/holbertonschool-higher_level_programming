@@ -46,3 +46,7 @@ Checking clear:
 	>>> my_list.clear()
 	>>> print(my_list)
 	[]
+
+Checking if my_list is a subclass of list:
+    >>> issubclass(MyList, list)
+    True
