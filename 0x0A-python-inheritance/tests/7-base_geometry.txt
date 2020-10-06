@@ -1,0 +1,46 @@
+The ``7-base_geometry`` module
+===============================
+
+Using ``BaseGeometry``
+---------------------
+
+
+Import ``BaseGeometry`` from the ``7-base_geometry`` module:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Creating an Instance:
+    >>> my_geome = BaseGeometry()
+
+Validating error:
+    >>> my_geome.integer_validator("Hola", 33)
+    >>> my_geome.integer_validator("Hola", -33)
+    Traceback (most recent call last):
+        ...
+    ValueError: Hola must be an integer
+
+    >>> my_geome.integer_validator("Hola", "hola")
+    Traceback (most recent call last):
+        ...
+    TypeError: Hola must be an integer
+
+Error in area:
+    >>> my_geome.area()
+    Traceback (most recent call last):
+        ...
+    Exception: area() is not implemented
+
+Arguments:
+    >>> my_geome.integer_validator()
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    >>> my_geome.integer_validator("Hola")
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> my_geome.integer_validator("Hola", 98)
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
