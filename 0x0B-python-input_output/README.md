@@ -69,5 +69,5 @@ This project is about:
 <b>Holberton School - Colombia<b><br>
 </p>
 <p align="center">
-<b>August, 2020.<b>
+<b>October, 2020.<b>
 </p>
