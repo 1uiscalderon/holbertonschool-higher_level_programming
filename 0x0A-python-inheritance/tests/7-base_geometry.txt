@@ -1,41 +1,59 @@
-The ``7-base_geometry`` module
-===============================
+check function  'base_geometry'
+----------------
 
-Using ``BaseGeometry``
----------------------
+Checking docstring for module:
+    >>> _import('7-base_geometry').doc_ != None
+    True
 
+Checking docstring for class:
+	>>> _import('7-base_geometry').BaseGeometry.doc_ != None
+	True
 
-Import ``BaseGeometry`` from the ``7-base_geometry`` module:
-    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Checking docstring methods:
+	>>> modul1 = _import("7-base_geometry").BaseGeometry.area.doc_
+	>>> len(modul1) > 1
+	True
 
-Creating an Instance:
-    >>> my_geome = BaseGeometry()
+    >>> modul2 = _import("7-base_geometry").BaseGeometry.integer_validator.doc_
+	>>> len(modul1) > 1
+	True
 
-Validating error:
-    >>> my_geome.integer_validator("Hola", 33)
-    >>> my_geome.integer_validator("Hola", -33)
+Importing class:
+	>>> BaseGeometry = _import_('7-base_geometry').BaseGeometry
+
+Checking area failure:
+	>>> geom = BaseGeometry()
+	>>> geom.area()
+	Traceback (most recent call last):
+	...
+	Exception: area() is not implemented
+
+Check many arguments for area:
+	 >>> geom.area(1)
+	 Traceback (most recent call last):
+         ...
+	 TypeError: area() takes 1 positional argument but 2 were given
+
+check for int:
+
+    >>> geom.integer_validator("hello", 0)
     Traceback (most recent call last):
-        ...
-    ValueError: Hola must be an integer
+    ...
+    ValueError: hello must be greater than 0
 
-    >>> my_geome.integer_validator("Hola", "hola")
+    >>> geom.integer_validator("list", [1, 2, 3])
     Traceback (most recent call last):
-        ...
-    TypeError: Hola must be an integer
+    ...
+    TypeError: list must be an integer
 
-Error in area:
-    >>> my_geome.area()
+    >>> geom.integer_validator("set", {"hello", "world"})
     Traceback (most recent call last):
-        ...
-    Exception: area() is not implemented
+    ...
+    TypeError: set must be an integer
 
-Arguments:
-    >>> my_geome.integer_validator()
+check no arguments:
+
+    >>> geom.integer_validator()
     Traceback (most recent call last):
-        ...
+    ...
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
-
-    >>> my_geome.integer_validator("Hola")
-    Traceback (most recent call last):
-        ...
-    TypeError: integer_validator() missing 1 required positional argument: 'value'
