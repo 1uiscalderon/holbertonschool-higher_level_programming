@@ -39,7 +39,7 @@ check for int:
     >>> geom.integer_validator("hello", 0)
     Traceback (most recent call last):
         ...
-    ValueError: hello must be an integer
+    ValueError: hello must be greater than 0
 
     >>> geom.integer_validator("list", [1, 2, 3])
     Traceback (most recent call last):
