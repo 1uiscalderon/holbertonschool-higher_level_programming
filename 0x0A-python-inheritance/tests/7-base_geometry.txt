@@ -39,8 +39,3 @@ Arguments:
     Traceback (most recent call last):
         ...
     TypeError: integer_validator() missing 1 required positional argument: 'value'
-
-    >>> my_geome.integer_validator("Hola", 98)
-    Traceback (most recent call last):
-        ...
-    TypeError: integer_validator() missing 1 required positional argument: 'value'
