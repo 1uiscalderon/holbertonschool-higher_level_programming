@@ -2,24 +2,24 @@ check function  'base_geometry'
 ----------------
 
 Checking docstring for module:
-    >>> _import('7-base_geometry').doc_ != None
+    >>> __import__('7-base_geometry').__doc__ != None
     True
 
 Checking docstring for class:
-	>>> _import('7-base_geometry').BaseGeometry.doc_ != None
+	>>> __import__('7-base_geometry').BaseGeometry.__doc__ != None
 	True
 
 Checking docstring methods:
-	>>> modul1 = _import("7-base_geometry").BaseGeometry.area.doc_
+	>>> modul1 = __import__("7-base_geometry").BaseGeometry.area.__doc__
 	>>> len(modul1) > 1
 	True
 
-    >>> modul2 = _import("7-base_geometry").BaseGeometry.integer_validator.doc_
+    >>> modul2 = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
 	>>> len(modul1) > 1
 	True
 
 Importing class:
-	>>> BaseGeometry = _import_('7-base_geometry').BaseGeometry
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 Checking area failure:
 	>>> geom = BaseGeometry()
@@ -38,8 +38,8 @@ check for int:
 
     >>> geom.integer_validator("hello", 0)
     Traceback (most recent call last):
-    ...
-    ValueError: hello must be greater than 0
+        ...
+    ValueError: hello must be an integer
 
     >>> geom.integer_validator("list", [1, 2, 3])
     Traceback (most recent call last):
