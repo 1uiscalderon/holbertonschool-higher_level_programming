@@ -16,11 +16,11 @@ class Rectangle(Base):
     def validator(self, name, value):
         """Verify conditions"""
         if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
+            raise TypeError("{:s} must be an integer".format(name))
         elif name in ["width", "height"] and value <= 0:
-            raise ValueError("{} must be > 0".format(name))
+            raise ValueError("{:s} must be > 0".format(name))
         elif name in ["x", "y"] and value < 0:
-            raise ValueError("{} must be >= 0".format(name))
+            raise ValueError("{:s} must be >= 0".format(name))
 
     @property
     def width(self):
@@ -72,11 +72,11 @@ class Rectangle(Base):
 
     def display(self):
         """Print rectangle using #"""
-        if self.__y > 0:
-            print("\n" * self.__x, end="")
+        for i in range(self.__y):
+            print()
         for i in range(self.__height):
-            print(" " * self.__x, end="")
-            print("#" * self.__width)
+            print(' ' * self.__x, end="")
+            print('#' * self.__width)
 
     def __str__(self):
         """Returns a string"""
