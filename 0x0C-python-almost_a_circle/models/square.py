@@ -9,10 +9,10 @@ class Square(Rectangle):
         """Initialize class Rectangle"""
         self.size = size
         super().__init__(self.size, self.size, x, y, id)
-        
+
     def __str__(self):
         """Returns a string"""
-        return "[Square] ({}) {}/{} - {}".format(
+        return "[Square] ({:d}) {:d}/{:d} - {:d}".format(
             self.id, self.x, self.y, self.__width)
 
     @property
