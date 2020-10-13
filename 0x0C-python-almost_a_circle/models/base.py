@@ -56,7 +56,7 @@ class Base:
         """returns a list of instances"""
         filename = cls.__name__ + ".json"
         try:
-             with open(filename) as f:
+            with open(filename) as f:
                 list_ = cls.from_json_string(f.read())
                 objlist = []
                 for obj in list_:
@@ -96,4 +96,3 @@ class Base:
                     list_d[k] = int(v)
                 list_d2.append(cls.create(**list_d))
             return list_d2
-            
