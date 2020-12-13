@@ -1,4 +1,4 @@
-#!/usr/bin/python3.6
+#!/usr/bin/python3
 """Write a script that lists all cities from the database hbtn_0e_4_usa
 """
 
