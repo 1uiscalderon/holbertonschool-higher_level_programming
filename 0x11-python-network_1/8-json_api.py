@@ -7,16 +7,15 @@ from sys import argv
 
 if __name__ == "__main__":
     if len(argv) < 2:
-        q = ""
+        letter = ""
     else:
-        q = argv[1]
+        letter = argv[1]
+    res = requests.post("http://0.0.0.0:5000/search_user", data={"q": letter})
     try:
-        res = requests.post('http://0.0.0.0:5000/search_user', data={'q': q})
         user = res.json()
-        print(user)
         if not user:
-            print('No result')
+            print("No result")
         else:
-            print('[{}] {}'.format(user.get('id'), user.get('name')))
+            print("[{}] {}".format(user.get("id"), user.get("name")))
     except Exception:
-        print('Not a valid JSON')
+        print("Not a valid JSON")
