@@ -2,8 +2,8 @@
 function factorial (a) {
   if (a < 1 || isNaN(a)) {
     return 1;
-    }
-    return a * factorial(a - 1);
+  }
+  return a * factorial(a - 1);
 }
-let a = parseInt(process.argv[2]);
+const a = parseInt(process.argv[2]);
 console.log(factorial(a));
