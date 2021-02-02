@@ -4,6 +4,6 @@ if (process.argv.length <= 3) {
   console.log(datos);
 } else {
   datos = process.argv.slice(2);
-  datos.sort().reverse();
+  datos.sort(function (a, b) { return b - a; });
   console.log(datos[1]);
 }
